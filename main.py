@@ -1,41 +1,23 @@
-print("========WORD QUEST========")
+print("========WORD QUEST 2.0========")
+
+words = ["apple", "dog", "sun"]
+translations = ["яблуко", "собака", "сонце"]
 
 score = 0
+round_number = 0
 
-print("Слово 1 із 3")
-answer = input("Переклади слово 'apple': ")
+while round_number < 3:
+    print("Переклади слово:", words[round_number])
 
-if answer == "яблуко":
-    score = score + 10
-    print("Правильно!")
-else:
-    print("Неправильно!")
+    answer = input("Твоя відповідь: ")
 
-print("Поточний рахунок:")
-print(score)
-print("Наступне слово")
+    if answer == translations[round_number]:
+        score = score + 10
+        print("Правильно!")
+    else:
+        print("Неправильно!")
 
-print("Слово 2 із 3")
-answer = input("Переклади слово 'dog': ")
+    round_number = round_number + 1
 
-if answer == "собака":
-    score = score + 10
-    print("Правильно!")
-else:
-    print("Неправильно!")
-
-print("Поточний рахунок:")
-print(score)
-print("Наступне слово")
-
-print("Слово 3 із 3")
-answer = input("Переклади слово 'sun': ")
-
-if answer == "сонце":
-    score = score + 10
-    print("Правильно!")
-else:
-    print("Неправильно!")
-
-print("Фінальний рахунок: ")
+print("Фінальний рахунок:")
 print(score)
