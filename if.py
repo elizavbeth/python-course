@@ -48,3 +48,12 @@ else:
 
 print("Фінальний рахунок: ")
 print(score)
+
+if score >= 30:
+    print("🏆 Ідеально!")
+elif score >= 20:
+    print("Добре!")
+elif score >= 10:
+    print("Непогано!")
+else:
+    print("Потрібно потренуватися!")

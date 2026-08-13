@@ -12,10 +12,10 @@ for word in words:
     if answer == translations[round_number]:
         score = score + 10
         print("Правильно!")
-        print(score)
     else:
         print("Неправильно!")
-        print(score)
+
+    print(score)
 
     round_number = round_number + 1
 
