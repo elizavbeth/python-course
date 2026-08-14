@@ -75,3 +75,13 @@ print(text.find("a"))
 # 1
 # Якщо .find() нічого не знайде?
 # -1
+
+print("----.find()----")
+
+word = "banana"
+
+first_position = word.find("a")
+second_position = word.find("a", first_position + 1)
+
+print(first_position)
+print(second_position)
