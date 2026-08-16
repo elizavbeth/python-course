@@ -57,3 +57,27 @@ elif score >= 10:
     print("Непогано!")
 else:
     print("Потрібно потренуватися!")
+
+print("--------elif--------")
+
+score = int(input("Введи рекорд: "))
+
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 60:
+    print("C")
+else:
+    print("D")
+
+print("--------if in if--------")
+
+score = int(input("Введи рекорд: "))
+correct_answers = int(input("Введи число правильних відповідей: "))
+
+if score >= 80:
+    if correct_answers >= 8:
+        print("Майстер слів!")
+    else:
+        print("Недостатньо правильних відповідей")
