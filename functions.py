@@ -33,3 +33,6 @@ answer = input("Переклади dog: ")
 points = calculate_points(answer, "собака")
 score = score + points
 print(score)
+
+# show_word("apple", translation="яблуко", points=20)
+# Спочатку позиційні аргументи, а потім іменовані
