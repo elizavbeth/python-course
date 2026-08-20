@@ -8,3 +8,6 @@ result_2 = [value * 10 for value in energy if value >= 5] # цикл з умов
 print(result)
 print(high_energy)
 print(result_2)
+
+# tuple_energy = (2, 4, 6, 8, 10)
+# tuple - це кортеж. Він зберігає значення, які не можна змінити.
