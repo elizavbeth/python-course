@@ -33,3 +33,32 @@ for word, translation in words.items():
         print("Правильно!")
     else:
         print("Неправильно!")
+
+print("--------Word Quest--------")
+
+# def calculate_points(answer, correct_answer, points=10):
+#     if answer == correct_answer:
+#         return points
+#     else:
+#         return 0
+
+words = {
+    "apple": "яблуко",
+    "dog": "собака",
+    "sun": "сонце"
+}
+
+score = 0
+
+for word, translation in words.items():
+    print("Переклади слово:", word)
+
+    answer = input("Твоя відповідь: ")
+
+    if answer == translation:
+        print("Правильно!")
+        score += 10
+    else:
+        print("Неправильно!")
+
+    print("Всього отримано балів:", score)

@@ -39,3 +39,39 @@ print(score)
 
 # Можна записувати декілька позиційних аргументів у виклику за допомогою параметру *args
 # Можна записувати декілька іменованих аргументів у виклику за допомогою параметру **kwargs
+
+print("--------виклик у виклику--------")
+
+def check_answer(answer, correct_answer):
+    return answer == correct_answer
+
+def show_result(correct):
+    if correct:
+        print("Правильно!")
+    else:
+        print("Неправильно!")
+
+def calculate_points(answer, correct_answer, points=10):
+    if answer == correct_answer:
+        return points
+    else:
+        return 0
+
+words = {
+    "apple": "яблуко",
+    "dog": "собака",
+    "sun": "сонце"
+}
+
+score = 0
+
+for word, translation in words.items():
+    print("Переклади слово:", word)
+
+    answer = input("Твоя відповідь: ")
+
+    show_result(check_answer("яблуко", "яблуко"))
+
+    points = calculate_points(answer, translation)
+    score = score + points
+    print("Всього отримано балів:", score)
