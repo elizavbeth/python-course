@@ -7,6 +7,12 @@ def calculate_points(correct, points=10):
     else:
         return 0
 
+def process_answer(answer, translation):
+    correct = check_answer(answer, translation)
+    points = calculate_points(correct)
+
+    return correct, points
+
 words = {
     "apple": "яблуко",
     "dog": "собака",
@@ -20,8 +26,7 @@ for word, translation in words.items():
 
     answer = input("Твоя відповідь: ")
 
-    correct = check_answer(answer, translation)
-    points = calculate_points(correct)
+    correct, points = process_answer(answer, translation)
 
     if correct:
         print("Правильно!")
