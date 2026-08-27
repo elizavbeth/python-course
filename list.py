@@ -68,3 +68,10 @@ print(result_2)
 
 # Метод .sort() змінює список і сортує його.
 # Тобто за замовчуванням — від меншого до більшого.
+
+print("--------enumerate()--------")
+
+words = ["apple", "dog", "sun"]
+
+for index, word in enumerate(words):
+    print(index, word)

@@ -84,6 +84,12 @@ if score >= 80:
 
 print("--------if in one line--------")
 
+# умовний вираз. Замість:
+# if correct:
+#     result = "Правильно"
+# else:
+#     result = "Неправильно"
+# result = "Правильно" if correct else "Неправильно"
 score = 80
 # тернарний умовний вираз
 print("Результат:", "Склав" if score >= 60 else "Не склав")
