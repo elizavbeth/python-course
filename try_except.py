@@ -34,3 +34,13 @@ print("E")
 
 # else у try: якщо помилки не виникло.
 # finally виконується незалежно від того, була помилка чи ні.
+
+print("--------try_except with several excepts--------")
+
+try:
+    number = int(input("Введи число: "))
+    result = 100 / number
+except ValueError:
+    print("Потрібно ввести число!")
+except ZeroDivisionError:
+    print("На нуль ділити не можна!")
