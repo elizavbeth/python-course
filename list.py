@@ -101,3 +101,15 @@ result = sorted(words, key=len)
 # Тут len каже: сортуй слова за їхньою довжиною.
 # Отримаємо:
 # ["dog", "sun", "apple"]
+
+print("--------sum(), min(), max()--------")
+
+scores_list = [10, 50, 20, 90, 40]
+
+total = sum(scores_list)  # Сума всіх елементів: 210
+lowest = min(scores_list)  # Найменше значення: 10
+highest = max(scores_list) # Найбільше значення: 90
+
+print(total)
+print(lowest)
+print(highest)
