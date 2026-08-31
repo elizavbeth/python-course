@@ -113,3 +113,21 @@ highest = max(scores_list) # Найбільше значення: 90
 print(total)
 print(lowest)
 print(highest)
+
+
+print("--------list comprehensions with numbers--------")
+
+row_scores = [10, 0, 25, 0, 50, 5]
+
+doubled_scores = [score * 2 for score in row_scores]
+print(doubled_scores)
+
+positive_scores = [score for score in row_scores if score > 0]
+print(positive_scores)
+
+print("--------list comprehensions with words--------")
+
+words = ["apple", "cat", "elephant"]
+
+word_lengths = [len(word) for word in words]
+print(word_lengths)
