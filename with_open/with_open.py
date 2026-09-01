@@ -22,10 +22,26 @@
 #         clean_line = line.strip()  # .strip() прибирає символ переходу на новий рядок \n
 #         print(clean_line)
 
-print("--------Приклад додавання рядків:--------")
+# print("--------Приклад додавання рядків:--------")
 
-player_name = "Max"
-score = 150
+# player_name = "Max"
+# score = 150
 
-with open("game_log.txt", "a", encoding="utf-8") as file:
-    file.write(f"{player_name}: {score}\n")
+# with open("game_log.txt", "a", encoding="utf-8") as file:
+#     file.write(f"{player_name}: {score}\n")
+
+# print("--------Приклад додавання рядків з dict:--------")
+
+# new_words = {"sun": "сонце", "tree": "дерево"}
+
+# with open("dictionary.txt", "a", encoding="utf-8") as file:
+#     for word, translation in new_words.items():
+#         file.write(f"{word}:{translation}\n")
+
+with open("raw_log.txt", "r", encoding="utf-8") as file:
+    for line in file:
+        clean_line = line.strip()
+        print(clean_line)
+
+with open("leaderboard.txt", "w", encoding="utf-8") as file:
+    pass
