@@ -38,10 +38,23 @@
 #     for word, translation in new_words.items():
 #         file.write(f"{word}:{translation}\n")
 
-with open("raw_log.txt", "r", encoding="utf-8") as file:
-    for line in file:
-        clean_line = line.strip()
-        print(clean_line)
+print("--------Генератор Таблиці Лідерів--------")
 
-with open("leaderboard.txt", "w", encoding="utf-8") as file:
-    pass
+with open("raw_log.txt", "r", encoding="utf-8") as reader, \
+     open("leaderboard.txt", "w", encoding="utf-8") as writer:
+
+    for line in reader:
+        # 1. Розпаковуємо та очищаємо від пробілів і \n
+        name, correct_str, questions_str, time_str = [item.strip() for item in line.split("|")]
+
+        # 2. Перетворюємо рядки у числа
+        correct = int(correct_str)
+        total = int(questions_str)
+        time_sec = float(time_str)
+
+        # 3. Рахуємо точність
+        accuracy = (correct / total) * 100
+
+        # 4. Записуємо відформатований рядок у файл
+        writer.write(f"{name:<10} | Точність: {accuracy:.1f}% | Час: {time_sec:.2f} сек\n")
+
