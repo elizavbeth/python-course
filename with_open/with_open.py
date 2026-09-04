@@ -40,8 +40,8 @@
 
 print("--------Генератор Таблиці Лідерів--------")
 
-with open("raw_log.txt", "r", encoding="utf-8") as reader, \
-     open("leaderboard.txt", "w", encoding="utf-8") as writer:
+with open("with_open/raw_log.txt", "r", encoding="utf-8") as reader, \
+     open("with_open/leaderboard.txt", "w", encoding="utf-8") as writer:
 
     for line in reader:
         # 1. Розпаковуємо та очищаємо від пробілів і \n

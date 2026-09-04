@@ -1,6 +1,6 @@
 # Тут гра запускається
 
-# # Щоб використати ці функції в main.py, у нас є 3 способи імпорту:
+# Щоб використати ці функції в main.py, у нас є 3 способи імпорту:
 
 # # Спосіб 1: Імпорт всього модуля
 
@@ -8,6 +8,7 @@
 
 # # Звертаємося через крапку: назва_модуля.назва_функції
 # is_correct = helpers.check_answer("apple", "apple")
+# print(is_correct)
 
 # # Спосіб 2: Точковий імпорт конкретних функцій (найпопулярніший!)
 
@@ -17,12 +18,12 @@
 # is_correct = check_answer("apple", "apple")
 # bonus = calculate_bonus(2.5)
 
+# print(is_correct)
+# print(bonus)
+
 # # Спосіб 3: Імпорт із псевдонімом (псевдонім через as)
 
 # import helpers as hp
 
 # is_correct = hp.check_answer("apple", "apple")
-
-from game_logic import format_score
-
-result = format_score("Anna", "120")
+# print(is_correct)
