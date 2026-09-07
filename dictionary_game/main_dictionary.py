@@ -12,7 +12,8 @@ def load_words(filename):
         return {"apple": "яблуко", "cat": "кіт"}
 
 def start_game():
-    words_db = load_words("dictionary.json")
+    # Вказуємо папку та ім'я файлу через слеш
+    words_db = load_words("dictionary_game/dictionary.json")
     words_keys = list(words_db.keys())
     
     player_name = input("Введи своє ім'я: ").strip()
