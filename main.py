@@ -1,16 +1,13 @@
-class Player:
-    def __init__(self, name):
-        self.name = name
-        self.score = 0
+class WordCard:
+    def __init__(self, word, translation, difficulty=1):
+        self.word = word
+        self.translation = translation
+        self.difficulty = difficulty
 
-    def add_score(self, points):
-        self.score += points
+    def calculate_reward(self):
+        return 10 * self.difficulty
 
-class VIPPlayer(Player):
-    def add_score(self, points):
-        self.score += (points * 2)
-        return self.score
+hard_card = WordCard("challenge", "виклик", 3)
 
-vip_user = VIPPlayer("Anna")
-result = vip_user.add_score(10)
-print(result)
+points = hard_card.calculate_reward()
+print(points)  # Виведе: 30 (бо 10 * 3 = 30)
